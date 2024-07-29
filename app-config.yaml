@@ -1,0 +1,17 @@
+app:
+  baseUrl: http://localhost:3000
+  title: "Local Backstage Plugin Test"
+  
+backend:
+  baseUrl: http://localhost:7007
+integrations:
+  azure:
+    - host: dev.azure.com
+      credentials:
+      - personalAccessToken: ${AZURE_PERSONAL_ACCESS_TOKEN}
+        organizations:
+          - ${AZURE_ORG_NAME}
+azureWorkItem:
+    project: "Developer Hub Demo"            
+
+        
