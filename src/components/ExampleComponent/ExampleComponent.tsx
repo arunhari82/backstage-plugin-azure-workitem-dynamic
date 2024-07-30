@@ -62,8 +62,8 @@ export const ExampleComponent = () => {
 
     <Page themeId="tool">
     {<Header title="Welcome to Azure Boards Custom Plugin Demo!" subtitle="Fetch Workitems from Azure Devops Project">
-      <HeaderLabel label="Owner" value="Team X" />
-      <HeaderLabel label="Lifecycle" value="Alpha" />
+      {/* <HeaderLabel label="Owner" value="Team X" />
+      <HeaderLabel label="Lifecycle" value="Alpha" /> */}
     </Header> }
     <Content>
       <Grid container spacing={3} direction="column">
