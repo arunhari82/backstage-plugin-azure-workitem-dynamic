@@ -32,7 +32,7 @@ export class AzureWorkItemApiClient implements AzureWorkItemApi {
     async getWorkItems(project: string): Promise<WorkItem[]> {
         const backendUrl = this.configApi.getString('backend.baseUrl');
         const res = await this.fetchApi.fetch(
-            `${backendUrl}/api/azure-workitem-backend-dynamic/workitems/${project}`,
+            `${backendUrl}/api/azure-workitem/workitems/${project}`,
         {
             method: 'GET'
         })
