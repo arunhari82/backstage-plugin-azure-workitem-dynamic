@@ -5,8 +5,7 @@ import {
   Content,
   TableColumn,
   Table,
-  Header,
-  HeaderLabel,
+  Header
 } from '@backstage/core-components';
 import { TableData } from '../../types';
 import { azureWorkItemApiRef } from '../../service/Api';
