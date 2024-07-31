@@ -36,9 +36,9 @@ It is only meant for local development, and the setup for it can be found inside
 
 ## Package and Publish 
   
-  ### plugin Architecture Injection
+### plugin Architecture Injection
       
-      ![Architecture Diagram](/docs/dynamic-plugin-injection.png)
+![Architecture Diagram](/docs/dynamic-plugin-injection.png)
 
 
   ### Setup .npmrc file
