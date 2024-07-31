@@ -62,17 +62,17 @@ It is only meant for local development, and the setup for it can be found inside
             ; end auth token
    ```
 
-  ### Pack and Publish
+## Pack and Publish
 
-      #### Packing and  Getting SHA Integrity
+### Packing and  Getting SHA Integrity
 
-           ```
-              npm pack --json > ./npminfo.json 
-           ``` 
-      After we execute this command the file `npminfo.json` will have integrity : SHA         
+      ```
+            npm pack --json > ./npminfo.json 
+      ``` 
+After we execute this command the file `npminfo.json` will have integrity : SHA         
 
-      ### Publish the plugin
+### Publish the plugin
 
-          ```
-             npm publish
-          ```
+      ```
+            npm publish
+      ```
