@@ -61,9 +61,6 @@ It is only meant for local development, and the setup for it can be found inside
             //pkgs.dev.azure.com/anattama/_packaging/mynpmregsitry/npm/:email=<<email_address>>
             ; end auth token
    ```
-
-## Pack and Publish
-
 ### Packing and  Getting SHA Integrity
 
       ```
@@ -76,3 +73,22 @@ After we execute this command the file `npminfo.json` will have integrity : SHA
       ```
             npm publish
       ```
+
+## Deploying the plugin with Dev Hub.
+
+### setup secret `dynamic-plugins-npmrc`
+
+This secret contains the registry information please refer to runtime section of architecture diagram above. Sample secret yaml below
+
+```
+      kind: Secret
+      apiVersion: v1
+      metadata:
+      name: dynamic-plugins-npmrc
+      namespace: backstage
+      data:
+      .npmrc: <<BASE64 Encoded file content of .npmrc file>>
+      type: Opaque
+
+```
+
