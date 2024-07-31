@@ -12,6 +12,10 @@ You can also serve the plugin in isolation by running `yarn start` in the plugin
 This method of serving the plugin provides quicker iteration speed and a faster startup and hot reloads.
 It is only meant for local development, and the setup for it can be found inside the [/dev](./dev) directory.
 
+## Introduction
+
+This front-end plugin
+
 ## Setup package.json
 
    ### Package json changes 
@@ -84,11 +88,42 @@ This secret contains the registry information please refer to runtime section of
       kind: Secret
       apiVersion: v1
       metadata:
-      name: dynamic-plugins-npmrc
-      namespace: backstage
+            name: dynamic-plugins-npmrc
+            namespace: backstage
       data:
-      .npmrc: <<BASE64 Encoded file content of .npmrc file>>
+         .npmrc: <<BASE64 Encoded file content of .npmrc file>>
       type: Opaque
 
 ```
 
+Note : this secret must be named as `dynamic-plugins-npmrc` and it should exists in the same namespace  as devhub installed namespace.
+
+### Updating the dynamic plugin config map.
+Add the following section to the dynamic plugin configmap
+
+```
+ - package: '@<<USERNAME>>/backstage-plugin-azure-workitem-dynamic@<<VERSION>>'
+        integrity: <<SHA FROM your npminfo.json file>>
+        disabled: false
+        pluginConfig:
+           dynamicPlugins:
+             frontend:
+                backstage-plugin-azure-workitem-dynamic:
+                  dynamicRoutes:
+                    - path: /azure-workitem-dynamic
+                      importName: AzureWorkitemDynamicPage
+                      menuItem:
+                        icon: AzureIcon
+                        text: Azure Work Items
+```           
+
+### Updating the `app-config` configmap
+
+This plugin requires the following configuration at root level as defined in `config.d.ts` file
+
+```
+    azureWorkItem:
+         project: "Developer Hub Demo"
+```         
+
+### Restart the devhub pod to see this plugin as a menu item
