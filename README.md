@@ -38,7 +38,7 @@ It is only meant for local development, and the setup for it can be found inside
   
   ### plugin Architecture Injection
       
-      ![alt text](./docs/dynamic-plugin-injection.png)
+      ![Architecture Diagram](/docs/dynamic-plugin-injection.png)
 
 
   ### Setup .npmrc file
