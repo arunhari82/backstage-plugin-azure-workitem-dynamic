@@ -36,12 +36,12 @@ It is only meant for local development, and the setup for it can be found inside
 
 ## Package and Publish 
   
-### plugin Architecture Injection
+### Plugin Architecture Injection
       
 ![Architecture Diagram](/docs/dynamic-plugin-injection.png)
 
 
-  ### Setup .npmrc file
+### Setup .npmrc file
    This file is located in home directory as a hidden file. We need to update this file to reflect the right npmregistry
 
    Sample .npmrc file shown below In this case Azure Artifactory is being used as npmregistry but we can also uses Nexus,Jfrog artifactory.
