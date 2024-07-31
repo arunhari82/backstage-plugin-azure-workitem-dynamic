@@ -14,7 +14,9 @@ It is only meant for local development, and the setup for it can be found inside
 
 ## Introduction
 
-This front-end plugin
+This front-end plugin pulls data from Azure Boards. It assumes you already have configured the backend plugin required for this which can be setup from this git repo ().
+
+![Front End Plugin](/docs/Azure%20Boards%20workitem.png)
 
 ## Setup package.json
 
